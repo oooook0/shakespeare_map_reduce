@@ -62,9 +62,7 @@ def Map(L):
 pool = Pool(processes=8,)
 
 #load file
-"""
-Answer to homework D 1
-"""
+
 tokens=load('shakespeare.txt')
 
 #divide file into 8 parts(use int incase )
@@ -80,9 +78,7 @@ token_to_tuples = Partition(single_count_tuples)
 term_frequencies = pool.map(Reduce, token_to_tuples.items())
 
 #sort the frequencies in descending order
-""""
-Answer to homework D 2
-"""
+
 sorted_frequencies = sorted(term_frequencies, key=lambda tup: -tup[1])
 
 
