@@ -3,19 +3,11 @@ import ujson
 import fnmatch
 from bz2 import BZ2File as bzopen
 import os
-"""
-from nltk.tokenize import TweetTokenizer
-"""
-path = "/Users/sunyitao/Desktop/00"
-pathout = "/Users/sunyitao/Desktop/cleaned file/"
 
 data = [os.path.join(dirpath, f)
         for dirpath, dirnames, files in os.walk(path)
         for f in fnmatch.filter(files, '*.bz2')]
 
-#searching for key word starbucks
-keyword=['starbucks']
-tknzr = nltk.tokenize.casual.TweetTokenizer(preserve_case=False,reduce_len=True)
     
 def parse_tweet(t):
         row = {}
