@@ -1,2 +1,2 @@
 # shakespeare 
-This is the code that map-reduce the words count using multithread 
+This is the code that map-reduce the words count using multithreads. 
